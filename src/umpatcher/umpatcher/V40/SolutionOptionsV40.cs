@@ -64,7 +64,7 @@ namespace UnityMonoDllSourceCodePatcher.V40 {
 				BuildInitProject = new ProjectInfo(ConstantsV40.OldGuid_build_init, Path.Combine(msvcPath, "build-init.vcxproj"));
 				EglibProject = new ProjectInfo(ConstantsV40.OldGuid_eglib, Path.Combine(msvcPath, "eglib.vcxproj"));
 				GenmdescProject = new ProjectInfo(ConstantsV40.OldGuid_genmdesc, Path.Combine(msvcPath, "genmdesc.vcxproj"));
-				LibgcbdwgcProject = new ProjectInfo(ConstantsV40.OldGuid_libgcbdwgc, Path.Combine(msvcPath, "libgcbdwgc.vcxproj"));
+				LibgcbdwgcProject = new ProjectInfo(ConstantsV40.OldGuid_libgcbdwgc, Path.Combine(msvcPath, "libgc.vcxproj"));
 				LibmonoProject = new ProjectInfo(ConstantsV40.OldGuid_libmono, Path.Combine(msvcPath, "libmono.vcxproj"));
 				LibmonoruntimeProject = new ProjectInfo(ConstantsV40.OldGuid_libmonoruntime, Path.Combine(msvcPath, "libmonoruntime.vcxproj"));
 				LibmonoStaticProject = new ProjectInfo(ConstantsV40.OldGuid_libmono_static, Path.Combine(msvcPath, "libmono-static.vcxproj"));
@@ -75,7 +75,7 @@ namespace UnityMonoDllSourceCodePatcher.V40 {
 				BuildInitProject = new ProjectInfo(ConstantsV40.OldGuid_build_init, Path.Combine(msvcPath, "build-init.vcxproj"));
 				EglibProject = new ProjectInfo(ConstantsV40.OldGuid_eglib, Path.Combine(msvcPath, "eglib.vcxproj"));
 				GenmdescProject = new ProjectInfo(ConstantsV40.OldGuid_genmdesc, Path.Combine(msvcPath, "genmdesc.vcxproj"));
-				LibgcbdwgcProject = new ProjectInfo(ConstantsV40.OldGuid_libgcbdwgc, Path.Combine(msvcPath, "libgcbdwgc.vcxproj"));
+				LibgcbdwgcProject = new ProjectInfo(ConstantsV40.OldGuid_libgcbdwgc, Path.Combine(msvcPath, "libgc.vcxproj"));
 				LibmonoDynamicProject = new ProjectInfo(ConstantsV40.OldGuid_libmono_dynamic, Path.Combine(msvcPath, "libmono-dynamic.vcxproj"));
 				break;
 

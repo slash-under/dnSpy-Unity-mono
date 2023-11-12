@@ -30,7 +30,7 @@ namespace UnityMonoDllSourceCodePatcher.V40 {
 		}
 
 		protected override void PatchCore() {
-			PatchOutDirs();
+			//PatchOutDirs();
 			PatchDebugInformationFormats(ConstantsV40.ReleaseConfigsWithNoPdb);
 			PatchGenerateDebugInformationTags(ConstantsV40.ReleaseConfigsWithNoPdb);
 			AddSourceFiles();

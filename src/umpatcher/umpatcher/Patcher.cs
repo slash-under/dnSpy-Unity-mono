@@ -43,8 +43,8 @@ namespace UnityMonoDllSourceCodePatcher {
 			if (Directory.Exists(dnSpyVersionPath))
 				throw new ProgramException($"Directory {dnSpyVersionPath} already exists");
 			CopyOriginalUnityFiles();
-			UpdateReadMe();
-			MergeMasterIntoDnSpy();
+			//UpdateReadMe();
+			//MergeMasterIntoDnSpy();
 			PatchOriginalFiles();
 		}
 
@@ -74,9 +74,9 @@ namespace UnityMonoDllSourceCodePatcher {
 				FileUtils.CopyDirectoryFromTo(sourceDir, destinationDir);
 			}
 
-			var gitignore = Path.Combine(dnSpyVersionPath, "mono", "cil", ".gitignore");
-			if (!TextFilePatcher.RemoveLines(gitignore, line => line.Text == "/opcode.def"))
-				throw new ProgramException("Couldn't remove /opcode.def from .gitignore");
+			//var gitignore = Path.Combine(dnSpyVersionPath, "mono", "cil", ".gitignore");
+			//if (!TextFilePatcher.RemoveLines(gitignore, line => line.Text == "/opcode.def"))
+			//	throw new ProgramException("Couldn't remove /opcode.def from .gitignore");
 
 			Log($"Committing copied files");
 			dnSpyRepo.CommitAllFiles($"Add Unity files ({Path.GetFileName(dnSpyVersionPath)}), commit hash {unityGitHash}");
@@ -107,9 +107,9 @@ namespace UnityMonoDllSourceCodePatcher {
 
 		void PatchOriginalFiles() {
 			Log($"Patching solution, projects and source code files");
-			dnSpyRepo.ThrowIfTreeNotClean();
+			//dnSpyRepo.ThrowIfTreeNotClean();
 			dnSpyRepo.CheckOut(Constants.DnSpyUnityRepo_dnSpy_Branch);
-			dnSpyRepo.ThrowIfTreeNotClean();
+			//dnSpyRepo.ThrowIfTreeNotClean();
 
 			PatchOriginalFilesCore();
 
